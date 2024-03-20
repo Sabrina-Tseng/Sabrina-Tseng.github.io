@@ -4,38 +4,71 @@
 	}
 }
 
+/* === for test only === */
+/* * {border:1px solid red;} */
+
+
 /* ==================== variables ==================== */
 :root {
 
+    /* font sizes */
 	--font-size: 24px;
-	--color: darkgray;
 
+    /* gap sizes */
 	--gutter: calc(var(--font-size) * 1.618);
+
+	/* colors */
+	--bg-color: white;
 }
 
+/* color */
+body{
+	background-color: var(--bg-color);
+}
+
+/* font sizes */
 @media (min-width: 600px){
 	:root {
 		--font-size: 32px;
 	}
 }
-
 body {
 	font-size: var(--font-size);
-	padding-top: calc(var(--gutter)*3);
-	padding-bottom: calc(var(--gutter)*3);
-	padding-left: var(--gutter);
-	padding-right: var(--gutter);
+}
 
+/* ==================== fonts ==================== */
+
+
+/* ==================== global margin ==================== */
+
+.margin {
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+}
+
+@media (min-width: 1280px){
+    .margin {
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+
+body {
+	padding-top: calc(var(--gutter) * 3);
+	padding-bottom: calc(var(--gutter) * 3);
 	display: flex;
 	flex-direction: column;
 	row-gap: var(--gutter);
 }
 
 h1 {
-	font-size: calc(var(--font-size)*2);
+	font-size: calc(var(--font-size) * 2);
 }
 
 footer {
 	text-align: center;
-	font-size: calc(var(--font-size)*0.5);
+	font-size: calc(var(--font-size) * 0.5);
 }
