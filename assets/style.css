@@ -26,6 +26,8 @@
 
     /* font sizes */
 	--font-size: 18px;
+	--h1-scale: 3;
+	--h2-scale: 2;
 
     /* gap sizes */
 	--gutter: calc(var(--font-size) * 1.618);
@@ -43,6 +45,8 @@ body{
 @media (min-width: 480px){
 	:root {
 		--font-size: 24px;
+		--h1-scale: 4;
+		--h2-scale: 3;
 	}
 }
 
@@ -61,7 +65,7 @@ nav {
 h1{
 	font-family: "EB Garamond", serif;
 	font-weight: 400;
-	font-size: calc( var(--font-size) * 4 );
+	font-size: calc( var(--font-size) * var(--h1-scale) );
 	line-height: 100%;
 }
 header p{
@@ -76,7 +80,7 @@ header p{
 }
 
 h2 {
-	font-size: calc( var(--font-size) * 3 )
+	font-size: calc( var(--font-size) * var(--h2-scale) )
 }
 
 
