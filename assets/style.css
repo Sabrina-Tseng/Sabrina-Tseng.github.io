@@ -1,8 +1,21 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+
+/* EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* Project fonts */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+
 @media screen and (prefers-reduced-motion: no-preference) {
 	html {
 		scroll-behavior: smooth;
 	}
 }
+
 
 /* === for test only === */
 /* * {border:1px solid red;} */
@@ -12,7 +25,7 @@
 :root {
 
     /* font sizes */
-	--font-size: 24px;
+	--font-size: 18px;
 
     /* gap sizes */
 	--gutter: calc(var(--font-size) * 1.618);
@@ -27,16 +40,36 @@ body{
 }
 
 /* font sizes */
-@media (min-width: 600px){
+@media (min-width: 480px){
 	:root {
-		--font-size: 32px;
+		--font-size: 24px;
 	}
-}
-body {
-	font-size: var(--font-size);
 }
 
 /* ==================== fonts ==================== */
+
+body {
+	font-size: var(--font-size);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+}
+
+nav {
+	font-family: "EB Garamond", serif;
+}
+
+h1{
+	font-family: "EB Garamond", serif;
+	font-weight: 400;
+	font-size: calc( var(--font-size) * 4 )
+}
+.ampersand{
+	font-style: italic;
+}
+
+h2 {
+	font-size: calc( var(--font-size) * 3 )
+}
 
 
 /* ==================== global margin ==================== */
@@ -64,11 +97,82 @@ body {
 	row-gap: var(--gutter);
 }
 
-h1 {
-	font-size: calc(var(--font-size) * 2);
-}
-
 footer {
 	text-align: center;
 	font-size: calc(var(--font-size) * 0.5);
+}
+
+/* ==================== hover ==================== */
+a{
+	display: inline-block;
+}
+/* @media (hover: hover) {
+    main a{
+        transition: 0.5s;
+    }
+    main a:hover{
+        background-color: yellow;
+        color: black;
+    }
+}
+@media (hover: none) {
+    main a{
+        background-color: yellow;
+        color: black;
+    }
+} */
+
+header a{
+	background-color: yellow;
+	rotate: -4deg;
+	color: black;
+}
+
+/* ==================== layout ==================== */
+
+/* nav */
+nav{
+	position: absolute;
+	top: calc( var(--gutter)/2 );
+	left: calc( var(--gutter)/2 );
+}
+
+/* header */
+header p{
+	margin-top: calc( var(--gutter)/2 );
+}
+header a{
+	margin-top: calc( var(--gutter)/4 );
+}
+
+/* projects */
+main ol{
+	margin-top: calc(var(--gutter)*3);
+	padding-top: calc(var(--gutter)*3);
+	margin-bottom: calc(var(--gutter)*3);
+
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--gutter)*2);
+
+	border-top: solid rgba(0, 0, 0, .2);;
+
+}
+
+#p1 h2{
+	font-family: "Major Mono Display", monospace;
+	text-transform: uppercase;
+}
+#p2 h2{
+	font-family: "Libre Caslon Text", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+#p3 h2{
+	font-weight: 400;
+	line-height: 100%;
+}
+#p4 h2{
+	font-family: "Prata", serif;
+	opacity: 20%;
 }
