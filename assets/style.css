@@ -110,32 +110,6 @@ footer {
 	font-size: calc(var(--font-size) * 0.5);
 }
 
-/* ==================== global hover ==================== */
-/* a{
-	display: inline-block;
-}
-@media (hover: hover) {
-    main a{
-        transition: 0.5s;
-    }
-    main a:hover{
-        background-color: yellow;
-        color: black;
-    }
-} */
-/* @media (hover: none) {
-    main a{
-        background-color: yellow;
-        color: black;
-    }
-} */
-
-header a{
-	display: inline-block;
-	background-color: yellow;
-	rotate: -4deg;
-	color: black;
-}
 
 /* ==================== layout ==================== */
 
@@ -147,6 +121,12 @@ nav{
 }
 
 /* header */
+header a{
+	display: inline-block;
+	background-color: yellow;
+	rotate: -4deg;
+	color: black;
+}
 h1{
 	margin-top: calc( var(--gutter)/2 );
 }
