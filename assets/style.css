@@ -61,8 +61,16 @@ nav {
 h1{
 	font-family: "EB Garamond", serif;
 	font-weight: 400;
-	font-size: calc( var(--font-size) * 4 )
+	font-size: calc( var(--font-size) * 4 );
+	line-height: 100%;
 }
+header p{
+	font-family: "EB Garamond", serif;
+	font-weight: 400;
+	opacity: 0.4;
+	font-variant-numeric: ordinal;
+}
+
 .ampersand{
 	font-style: italic;
 }
@@ -90,8 +98,8 @@ h2 {
 }
 
 body {
-	padding-top: calc(var(--gutter) * 3);
-	padding-bottom: calc(var(--gutter) * 3);
+	padding-top: calc(var(--gutter) * 4);
+	padding-bottom: calc(var(--gutter) * 2);
 	display: flex;
 	flex-direction: column;
 	row-gap: var(--gutter);
@@ -102,11 +110,11 @@ footer {
 	font-size: calc(var(--font-size) * 0.5);
 }
 
-/* ==================== hover ==================== */
-a{
+/* ==================== global hover ==================== */
+/* a{
 	display: inline-block;
 }
-/* @media (hover: hover) {
+@media (hover: hover) {
     main a{
         transition: 0.5s;
     }
@@ -114,8 +122,8 @@ a{
         background-color: yellow;
         color: black;
     }
-}
-@media (hover: none) {
+} */
+/* @media (hover: none) {
     main a{
         background-color: yellow;
         color: black;
@@ -123,6 +131,7 @@ a{
 } */
 
 header a{
+	display: inline-block;
 	background-color: yellow;
 	rotate: -4deg;
 	color: black;
@@ -132,14 +141,17 @@ header a{
 
 /* nav */
 nav{
-	position: absolute;
+	position: fixed;
 	top: calc( var(--gutter)/2 );
 	left: calc( var(--gutter)/2 );
 }
 
 /* header */
-header p{
+h1{
 	margin-top: calc( var(--gutter)/2 );
+}
+header p{
+	margin-top: calc( var(--gutter) );
 }
 header a{
 	margin-top: calc( var(--gutter)/4 );
@@ -174,5 +186,16 @@ main ol{
 }
 #p4 h2{
 	font-family: "Prata", serif;
-	opacity: 20%;
+	/* opacity: 20%; */
+	color: lightgrey;
+}
+
+/* hover */
+li p{
+	display: inline-block;
+	transition: 1s;
+}
+li:has(h2:hover) p{
+	background-color: yellow;
+	rotate: -4deg;
 }
